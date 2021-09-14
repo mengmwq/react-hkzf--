@@ -170,9 +170,7 @@ export default class Profile extends Component {
                 />
 
                 {/* Fork me */}
-                <div className={styles.forkMe}>
-                    欢迎访问仓库 <a href="https://gitee.com/jerry306">润润</a>
-                </div>
+                
             </div>
         )
     }

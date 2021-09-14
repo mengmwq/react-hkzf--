@@ -13,7 +13,7 @@ export const getCurrentCity = () => {
             const curCity = new window.BMapGL.LocalCity()
             curCity.get(async res => {
                 try {
-                    const result = await axios.get(`http://localhost:8009/area/info?name=${res.name}`)
+                    const result = await axios.get(`http://localhost:8080/area/info?name=${res.name}`)
                     // 存储到本地存储中
                     localStorage.setItem('zfy_city', JSON.stringify(result.data.body))
                     // 返回该城市数据

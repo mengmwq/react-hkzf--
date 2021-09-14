@@ -37,7 +37,7 @@ export default class Map extends Component {
         // 初始化地图实例
         const map = new BMapGL.Map('container');
         // 获取当前定位城市
-        const {label, value} = JSON.parse( localStorage.getItem('zfy_city') );
+        const {label, value} = JSON.parse( localStorage.getItem('zfy_city') ) || "{}";
         // 在其他方法中通过 this 来获取到地图对象
         this.map = map;
         //创建地址解析器实例

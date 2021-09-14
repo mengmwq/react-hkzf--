@@ -46,7 +46,7 @@ export default class Filter extends Component {
 
     async getFiltersData () {
         // 获取当前定位城市id
-        const {value} = JSON.parse(localStorage.getItem('zfy_city'));
+        const {value} = JSON.parse(localStorage.getItem('zfy_city')) || "{}";
         const res = await API.get(`/houses/condition?id=${value}`);
         this.setState({
             filtersData: res.data.body
